@@ -1,15 +1,17 @@
 {
-  "name": "to-do-list",
-  "version": "1.0.0",
+  "name": "fazila-to-do-list",
+  "version": "1.0.1",
   "description": "Command Line base todo list for personal use.",
   "main": "index.js",
   "type": "module",
+  "bin": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "chalk": "^5.3.0",
     "inquirer": "^9.2.19"
   },
   "devDependencies": {
