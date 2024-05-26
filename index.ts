@@ -9,13 +9,18 @@ while(condition)
 {let todoQuestion = await inquirer.prompt([
     {
         name: "firstQuestion",
-        message: `${chalk.yellow.bold("What would you like to yout to do list: ")}`,
+        message: `${chalk.yellow.bold("What would you like to your to do list: ")}`,
         type: "input",
     }
 ]);
 
-todo.push(todoQuestion.firstQuestion);
-console.log(todo);
+if (todoQuestion.firstQuestion === ""){
+    console.log(chalk.red.italic('Sorry!!! You forgot to enter anything in your todo list.'))
+}else {
+    todo.push(todoQuestion.firstQuestion);
+    console.log(todo);
+}
+
 let answer = await inquirer.prompt(
     {
         name: "option",
@@ -27,7 +32,7 @@ let answer = await inquirer.prompt(
 
 if (answer.option === "Exit"){
     condition = false
-    console.log(`${chalk.red.bold("Good Bye!!")}`)
+    console.log(chalk.red.bold("Good Bye!!! \nThanks for trying my todo list. \nRegards Fazila Malik"))
 };
 
 };
